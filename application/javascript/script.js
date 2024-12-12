@@ -1,9 +1,20 @@
 function adicionarNovaTarefa(){
-    const taskField = document.getElementById('inputTarefa');
+    let taskField = document.getElementById('inputTarefa');
+    let task = taskField.value;
 
-    if (taskField == "") {
-        alert('erro');
+    let message = document.getElementById('resposta');
+
+    if (task == "") {
+        alert('Adicione uma Tarefa');
+        taskField.style.border = '1px solid red';
+        document.textContent = message;
     }
+
+    let lista = document.querySelector('ul');
+    lista.createElement('li');
+
+
+    taskField.value = ""
+
 }
 
-adicionarNovaTarefa()
