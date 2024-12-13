@@ -58,7 +58,8 @@ html, body{
 
 .divListaTarefas {
     width: 500px;
-    padding: .25rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
     margin-top: 30px;
     background-color: white;
     border-radius: 5px;
@@ -70,11 +71,9 @@ html, body{
     display: block;
 }
 
-
 .divListaTarefas ul{
     list-style: none;
     padding: 0;
-    margin-top: 10px;
     text-align: center;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -82,6 +81,8 @@ html, body{
     color: #331f19;
     
 }
+
+
 
 
 
