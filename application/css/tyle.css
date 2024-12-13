@@ -56,19 +56,19 @@ html, body{
     font-size: 16px;
     margin-top: 20px;
     color: black;
-    display: none;
+   
 }
 
-.box .mensagem p.active{
-    display: block;
-}
 
 .divListaTarefas{
-    padding: 1.5rem;
+    background-color: black
+
 }
 
 .divInputTarefa ul#listaTarefas{
     background-color: white;
     box-shadow: 1px 2px 5px 3px rgba(0, 0, 0, .5);
 }
+
+
 
