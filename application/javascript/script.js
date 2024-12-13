@@ -1,27 +1,26 @@
 function adicionarNovaTarefa(){
-    //pega o valor digitado pelo usuário
-    const campoTarefa = document.getElementById('inputTarefa');
-    const task = campoTarefa.value.trim();
-
-    // verifica se o input da aplicação não está vazio
+    let campoTarefa = document.getElementById('inputTarefa');
+    let task = campoTarefa.value.trim();
+    
     if (task == '') {
-        campoTarefa.style.background = ' red'
+        campoTarefa.style.background = ' red';
         let errorMessage = 'Campo inválido 😢';
-        document.getElementById('resposta').innerText = errorMessage;
-
-
+        document.getElementById('resposta').innerText = errorMessage;   
 
     }else{
-        campoTarefa.style.borderColor = 'green'
+        campoTarefa.style.border = ' 1px solid green';
         let successMessage = 'Tarefa adicionada com sucesso!😍';
-        
-        document.getElementById('resposta').innerText = successMessage;
-    }
+        campoTarefa.value = "";
 
-    //Adiciona uma nova tarefa (li) dentro da lista (ul)
-    let taskList = document.getElementById('listaTarefas');
-    let newTask = document.createElement('li')
-    newTask.textContent = task;
-    taskList.appendChild(task);
+        document.getElementById('resposta').innerText = successMessage;
+        let taskList = document.getElementById('divListaTarefas');
+        taskList.classList.add('.active');
+
+        let listaTarefas = document.getElementById('listatarefas');
+        let listaItem = document.createElement('li');
+        listaItem.textContent = task;
+        listaTarefas.appendChild(listaItem);
+    }  
+    
 }
 
