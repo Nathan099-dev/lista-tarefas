@@ -1,15 +1,20 @@
 function adicionarNovaTarefa(){
     //pega o valor digitado pelo usuário
     const campoTarefa = document.getElementById('inputTarefa');
-    const task = campoTarefa.value;
+    const task = campoTarefa.value.trim();
 
     // verifica se o input da aplicação não está vazio
-    if (campoTarefa == '') {
-        let errorMessage = 'Digite uma tarefa para adicioná-la a sua lista';
+    if (task == '') {
+        campoTarefa.style.background = ' red'
+        let errorMessage = 'Campo inválido 😢';
         document.getElementById('resposta').innerText = errorMessage;
 
+
+
     }else{
-        let successMessage = 'Tarefa adicionada com sucesso';
+        campoTarefa.style.borderColor = 'green'
+        let successMessage = 'Tarefa adicionada com sucesso!😍';
+        
         document.getElementById('resposta').innerText = successMessage;
     }
 
@@ -17,6 +22,6 @@ function adicionarNovaTarefa(){
     let taskList = document.getElementById('listaTarefas');
     let newTask = document.createElement('li')
     newTask.textContent = task;
-    taskList.appendChild(task)
+    taskList.appendChild(task);
 }
 
