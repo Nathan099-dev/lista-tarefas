@@ -1,25 +1,28 @@
 function adicionarNovaTarefa(){
-    let campoTarefa = document.getElementById('inputTarefa');
-    let task = campoTarefa.value.trim();
+    const campoTarefa = document.getElementById('inputTarefa');
+    const task = campoTarefa.value.trim();
     
     if (task == '') {
         campoTarefa.style.background = ' red';
-        let errorMessage = 'Campo inválido 😢';
-        document.getElementById('resposta').innerText = errorMessage;   
+        const errorMessage = 'Campo inválido 😢';
+        document.getElementById('resposta').innerText = errorMessage;  
+        errorMessage = "";
 
     }else{
         campoTarefa.style.border = ' 1px solid green';
-        let successMessage = 'Tarefa adicionada com sucesso!😍';
+        const successMessage = 'Tarefa adicionada com sucesso!😍';
         campoTarefa.value = "";
 
         document.getElementById('resposta').innerText = successMessage;
-        let taskList = document.getElementById('divListaTarefas');
-        taskList.classList.add('.active');
 
-        let listaTarefas = document.getElementById('listatarefas');
-        let listaItem = document.createElement('li');
-        listaItem.textContent = task;
-        listaTarefas.appendChild(listaItem);
+        let divListaTarefas = document.querySelector('.divListaTarefas');
+        divListaTarefas.style.display = 'block';
+
+        let listaTarefas = document.querySelector('#listaTarefas');
+        let adicionarNovaTarefa = document.createElement('li');
+        listaTarefas.style.display = 'block';
+        listaTarefas.textContent = task;
+        listaTarefas.appendChild(adicionarNovaTarefa);
     }  
     
 }
