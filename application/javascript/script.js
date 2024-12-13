@@ -21,7 +21,8 @@ function adicionarNovaTarefa(){
         let listaTarefas = document.querySelector('#listaTarefas');
         let adicionarNovaTarefa = document.createElement('li');
         listaTarefas.style.display = 'block';
-        listaTarefas.textContent = task;
+        
+        adicionarNovaTarefa.textContent = task;
         listaTarefas.appendChild(adicionarNovaTarefa);
     }  
     
